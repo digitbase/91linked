@@ -1,12 +1,16 @@
-# 91linked
+# flutter01
 
-学渣应该由学渣来拯救.
+A new Flutter project.
 
-知识与知识是有链接的,共享这些知识[节点].有助与形成知识的的网络.
+## Getting Started
 
-知识一层一层通过节点,不断延展.我们添加自己的节点.嫁接别人的我们认为容易理解的[节点].
+This project is a starting point for a Flutter application.
 
-通过检索方便的找到它们,编辑和修改.
+A few resources to get you started if this is your first Flutter project:
 
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
