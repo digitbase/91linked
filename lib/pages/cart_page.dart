@@ -63,7 +63,7 @@ class _CartPageState extends State<CartPage> {
   }
 
   void _show() async {
-    print('_show() is here');
+    //print('_show() is here');
     SharedPreferences prefs = await SharedPreferences.getInstance();
     if (prefs.getStringList('testInfo') != null) {
       setState(() {

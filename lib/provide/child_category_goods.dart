@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import '../model/category_goods_model.dart';
+import '../models/category_goods_model.dart';
 
 class ChildCategoryGoods with ChangeNotifier {
   int value = 0;

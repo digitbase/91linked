@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter01/pages/lib_pages.dart';
 import 'package:provide/provide.dart';
+import 'Tools/sqliteHelper.dart';
 import 'provide/cart_provider.dart';
 import 'provide/counter.dart';
 import 'element/r_log.dart';
@@ -12,6 +13,7 @@ import './routers/routers.dart';
 import './routers/application.dart';
 import 'provide/gooddetail_pvd.dart';
 import 'provide/details_info.dart';
+import 'package:sqflite/sqflite.dart';
 
 void main() {
   var counter = Counter();
@@ -29,7 +31,7 @@ void main() {
     ..provide(Provider<CarProvide>.value(cartPrivde))
     ..provide(Provider<DetailInfoProvide>.value(detailInfoProvide))
     ..provide(Provider<ChildCategoryGoods>.value(childCategoryGoods));
-  runApp(ProviderNode(child: MyApp(), providers: providers));
+  runApp(ProviderNode(child: MyApp2(), providers: providers));
 }
 
 class MyApp extends StatelessWidget {
@@ -47,6 +49,39 @@ class MyApp extends StatelessWidget {
       ),
       routes: staticRoutes,
       initialRoute: "/",
+    );
+  }
+}
+
+class MyApp2 extends StatefulWidget {
+  @override
+  _MyApp2State createState() => _MyApp2State();
+}
+
+class _MyApp2State extends State<MyApp2> {
+  DbHelp dbHelp;
+
+  void initState() {
+    super.initState();
+
+    dbHelp = new DbHelp();
+    dbHelp.db;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('test'),
+        ),
+        body: Center(
+          child: Text('test3',
+              style: TextStyle(
+                fontSize: 30,
+              )),
+        ),
+      ),
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter01/service/service_method.dart';
-import '../model/category_model.dart';
-import '../model/category_goods_model.dart';
+import '../models/category_model.dart';
+import '../models/category_goods_model.dart';
 import "../element/r_log.dart";
 import 'dart:convert';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
