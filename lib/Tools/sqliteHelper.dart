@@ -45,12 +45,14 @@ class DbHelper {
   Future<Database> _database;
 
   Future<Database> get database async {
+    print('get Database');
     if (_database != null) return _database;
     _database = getDatabaseInstance();
     return _database;
   }
 
   Future<Database> getDatabaseInstance() async {
+    print('getDatabaseInstance');
     var databasePath = await getDatabasesPath();
     String path = join(databasePath, 'person.db');
     final Future<Database> database = openDatabase(path, version: 1,
@@ -83,6 +85,12 @@ class DbHelper {
       list.add(Person.fromMap(itemMap));
     });
     return list;
+  }
+
+  Future<bool> isInData(String name) async {
+    final db = await database;
+    var result = await db.query("Person", where: "name =?", whereArgs: [name]);
+    return result.isEmpty ? false : true;
   }
 
   addPersonToDatabase(Person person) async {

@@ -8,4 +8,5 @@ const servicePath = {
   //'getMallGoods': 'https://s.ohltr.com/api/category_goods.php', //商品分类的商品列表
   //'getGoodDetailById': serviceUrl + 'getGoodDetailById',
   'getGoodDetailById': 'https://s.ohltr.com/api/goods_info.php',
+  'searchwordByword': 'https://s.ohltr.com/searchapi.php',
 };

@@ -42,8 +42,10 @@ Future request({url, data = null, method = 'post'}) async {
       String para = "";
       if (data != null) {
         for (int me = 0; me < data.keys.toList().length; me++) {
-          para +=
-              data.keys.toList()[me] + "=" + data[data.keys.toList()[me]] + "&";
+          para += data.keys.toList()[me] +
+              "=" +
+              data[data.keys.toList()[me]].toString() +
+              "&";
         }
       }
       String getUrl = servicePath[url] + "?" + para;

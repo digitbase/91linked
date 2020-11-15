@@ -8,22 +8,20 @@ class PersonListProvide with ChangeNotifier {
   List<Person> personList = [];
   int listCount = 0;
 
-  void changeList(Person p) {
-    personList.add(p);
-    listCount = personList.length;
-    notifyListeners();
+  void changeList(Person p) async {
+    int row = await DbHelper.dbHelper.addPersonToDatabase(p);
+    getPersonList();
   }
 
   void getPersonList() async {
     personList = await DbHelper.dbHelper.getAllPersons();
+    personList = personList.reversed.toList();
     listCount = personList.length;
     notifyListeners();
   }
 
   void delPersonById(int id) async {
     await DbHelper.dbHelper.deletePersonWithId(id);
-    personList = await DbHelper.dbHelper.getAllPersons();
-    listCount = personList.length;
-    notifyListeners();
+    getPersonList();
   }
 }

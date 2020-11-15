@@ -23,11 +23,6 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
-    String log = ("设置像素密度：" + ScreenUtil.pixelRatio.toString());
-    log += ("设置高：" + ScreenUtil.screenHeight.toString());
-    log += ("设置宽：" + ScreenUtil.screenWidth.toString());
-    //RLogger.instance.d(log, tag: 'new tag');
-
     return Scaffold(
       appBar: AppBar(
         title: Text('美好人间'),
