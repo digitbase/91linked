@@ -11,7 +11,7 @@ class WordPage extends StatelessWidget {
   WordPage(this.word);
   @override
   Widget build(BuildContext context) {
-    _getWordInfo(context);
+    //_getWordInfo(context);
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -28,7 +28,22 @@ class WordPage extends StatelessWidget {
       body: Column(
         children: [
           WordSearch(),
+          UserWordList(),
         ],
+      ),
+    );
+  }
+}
+
+class UserWordList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        width: ScreenUtil().setWidth(750),
+        height: ScreenUtil().setHeight(800),
+        color: Colors.red,
+        child: Text('ttt'),
       ),
     );
   }
