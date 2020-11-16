@@ -41,10 +41,24 @@ class UserWordList extends StatelessWidget {
     return Expanded(
       child: Container(
         width: ScreenUtil().setWidth(750),
-        height: ScreenUtil().setHeight(800),
+        //height: ScreenUtil().setHeight(800),
+        margin: EdgeInsets.only(top: 10),
         color: Colors.red,
-        child: Text('ttt'),
+        child: Column(
+          children: [
+            _title(),
+            Text('222'),
+          ],
+        ),
       ),
+    );
+  }
+
+  Widget _title() {
+    return Container(
+      height: ScreenUtil().setHeight(20),
+      color: Colors.blue,
+      child: Text('title'),
     );
   }
 }
