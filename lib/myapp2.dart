@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter01/main.dart';
 import 'package:flutter01/provide/personlist_provide.dart';
 import 'package:flutter_screenutil/screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -28,7 +29,9 @@ class _MyApp2State extends State<MyApp2> {
   }
 
   @override
-  Widget build(BuildContext context) {}
+  Widget build(BuildContext context) {
+    return Container();
+  }
 }
 
 class _MyApp3State extends State<MyApp2> {

@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter01/models/dog_model.dart';
 import 'package:flutter01/pages/lib_pages.dart';
+import 'package:flutter01/pages/wordpage/wordhome_page.dart';
 import 'package:flutter01/provide/personlist_provide.dart';
 import 'package:flutter01/provide/word_provider.dart';
 import 'package:flutter_html/style.dart';
@@ -44,32 +45,14 @@ void main() {
     ..provide(Provider<DetailInfoProvide>.value(detailInfoProvide))
     ..provide(Provider<ChildCategoryGoods>.value(childCategoryGoods));
 
-  runApp(ProviderNode(child: MyApp2(), providers: providers));
+  runApp(ProviderNode(child: MyApp3(), providers: providers));
 }
 
 class MyApp3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: myHomePage(),
-    );
-  }
-}
-
-class myHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    ScreenUtil.init(context,
-        designSize: Size(750, 1334), allowFontScaling: false);
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('title'),
-      ),
-      body: Container(
-        width: ScreenUtil().setWidth(350),
-        height: ScreenUtil().setHeight(20),
-        color: Colors.red,
-      ),
+      home: WordHomePage(),
     );
   }
 }
