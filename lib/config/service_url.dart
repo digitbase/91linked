@@ -9,5 +9,5 @@ const servicePath = {
   //'getGoodDetailById': serviceUrl + 'getGoodDetailById',
   'getGoodDetailById': 'https://s.ohltr.com/api/goods_info.php',
   'searchwordByword': 'http://www.s.com/searchapi.php',
-  'searchwordList': 'https://s.ohltr.com/api/search_list.php',
+  'searchwordList': 'http://www.s.com/api/search_list.php',
 };

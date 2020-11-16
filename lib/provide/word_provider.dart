@@ -26,9 +26,9 @@ class WordsProvide with ChangeNotifier {
 
   Future getWordListByFirst(String word) async {
     initWord = word;
-    var formData = {'word': word, 'ex': 1};
+    var formData = {'word': word, 'ex': 3};
     await request(
-      url: 'searchwordByword',
+      url: 'searchwordList',
       data: formData,
       method: 'get',
     ).then((value) {

@@ -119,8 +119,8 @@ class WordSearch extends StatelessWidget {
               return InkWell(
                 onTap: () {
                   String sw = wordsList.data[index].word;
+                  Provide.value<WordsProvide>(context).getWordListByFirst(sw);
                   if (wordsList.data.length > 0) {
-                    Provide.value<WordsProvide>(context).getWordListByFirst(sw);
                     Provide.value<WordsProvide>(context).getWordInfo(sw);
                     selectionController.text = wordsList.data[index].word;
                     selectionController.selection = TextSelection.fromPosition(
